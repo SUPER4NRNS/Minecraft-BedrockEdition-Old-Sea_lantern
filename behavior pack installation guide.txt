@@ -1,0 +1,17 @@
+Conductive Sea Lantern: Version 1.0.3
+
+The behavior pack and resource pack preserve the original Sea Lantern sounds and existing block properties.
+
+Installation:
+Close Minecraft and back up your world. Extract the archive, then open each of the two .mcpack files separately to import them into Minecraft.
+
+Open the world settings and make sure that both the behavior pack and resource pack are enabled and updated to version 1.0.3.
+
+If you need to repair an older world, use the provided world conversion tool.
+
+Gameplay Balance:
+To maintain gameplay balance, the legacy Sea Lantern has no crafting recipe in Survival Mode. However, mining an existing legacy Sea Lantern will drop the block itself.
+
+The block is also available in the Creative Mode inventory.
+
+Block ID: railfix:conductive_sea_lantern
