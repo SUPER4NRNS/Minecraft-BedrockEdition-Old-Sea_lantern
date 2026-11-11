@@ -1,2 +1,23 @@
-# Minecraft-BE-Old-Sealantern
+# Minecraft-BedrockEdition-Old-Sea_lantern
 我的世界基岩版旧版海晶灯行为包以及存档修复工具，解决因版本更新导致依赖基岩版旧版海晶灯红石相关组件失效问题
+# Bedrock 海晶灯替换工具
+
+将基岩版 `.mcworld` 中已生成区块的原版海晶灯替换为 `railfix:conductive_sea_lantern`，输出新世界，不覆盖输入文件。请先备份世界，关闭游戏，并在输出副本中验证。需要另行安装并启用提供该自定义方块的行为包及资源包，否则方块无法正常显示或使用。本项目不包含世界存档，安装资源包/行为包详见行为包安装说明。
+
+## 使用方法（Windows）
+
+安装 Python 3.12 64 位，然后在项目目录运行：
+
+```powershell
+py -3.12 -m pip install -r requirements.txt
+py -3.12 convert.py "C:\路径\原世界.mcworld" "C:\路径\新世界.mcworld" --scan
+py -3.12 convert.py "C:\路径\原世界.mcworld" "C:\路径\新世界.mcworld"
+```
+
+扫描只读取临时副本；转换会复制到临时目录并生成新文件。目标文件必须不存在，确保磁盘有足够空间容纳解压数据和输出文件。导入结果后检查铁路、周围建筑、红石器械及资源包，保留原始备份。
+
+## 范围与限制
+
+处理三维度中已生成区块的存储版本 1、8、9 和三种海晶灯名称（`minecraft:sea_lantern`、`minecraft:seaLantern`、`minecraft:sealantern`），保留区块的其他数据。检测到旧式数字 ID 169 时会中止，不会生成输出。遇到不支持的相关格式或解析失败也会中止。不会替换容器、物品、结构或之后生成的区块。脚本根据具体名称匹配，不保证适用于所有基岩版存档或未来格式；仍需游戏内验证。
+
+此前的替换方法在一个 1.26.63 世界中经过测试；此独立打包版本需要在你的环境中进一步验证。依赖的编译版本因平台与 Python 版本而异；上面的版本组合针对 Windows x64 和 Python 3.12。
