@@ -1,3 +1,8 @@
+**Languages:** English | [简体中文](README.zh-CN.md)
+
+---
+
+
 # Minecraft Bedrock Sea Lantern Replacement Tool
 
 A world conversion tool that replaces vanilla Sea Lantern blocks in already-generated chunks of Minecraft Bedrock Edition `.mcworld` files with the custom block `railfix:conductive_sea_lantern`.
